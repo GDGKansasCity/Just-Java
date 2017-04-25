@@ -94,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_TEXT, message);
 
         if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
+//            startActivity(intent);
+            throw new RuntimeException("This is a forced crash");
         }
     }
 
